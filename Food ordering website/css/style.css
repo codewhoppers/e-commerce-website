@@ -1,0 +1,208 @@
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*css variables*/
+:root{
+    --navbar-height: 59px;
+}
+
+/*navigation bar */
+#navbar{
+    display: flex; /* sidha sidha sab kuch ek row me aya jata ha*/
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+/* navigation bar : Logo and image */
+#logo{
+    margin: 10px 34px;
+
+}
+#logo img{
+    height: 72px;
+    margin: 3px 6px;
+}
+ /* navigation bar : List Styling*/
+
+ #navbar ul{
+    display: flex;  /* navigation bar ke sare item sidha aya jayenga ekdum ek line me.*/
+    font-family: 'Baloo Bhai',cursive;
+ }
+
+ #navbar::before{ /* ye sare changes navbar ke area me honge jaha pe humne logo aur navbar item ko place kia ha*/
+    content:"";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 70%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+ }
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;  
+}
+ #navbar ul li a{
+    color:white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none; /* isse navbar ke niche se undedrline hat jayegi*/ 
+ }
+ #navbar ul li a:hover{
+    color:black;
+    display: block;
+    background-color: white;
+    
+ }
+
+ /*Home Section*/
+ #home{
+    display: flex; /*sidha kar dega ek row me sare text ko*/
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 400px; /* isse humlog ka background image image ka height aur bardh jayega niche ki taraf*/ /* iska jyda height rakh ne se ek white line aya rha tha betwwen navigation bar and below part of website .*/
+    justify-content: center; /* ye chiz sare content ko kone me lake center me li aye ga*/
+    align-items: center; /* ye chiz sare items ko kone me lake center me li aye ga*/
+ }
+
+ #home::before{ /* isse humlog is site ka background image set kar te ha*/
+    content:"";
+    background:url(../images/salad-g6e20e4023_1920.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 83%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89; 
+ }
+ 
+ #home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif',serif;
+ }
+ #home p {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif',serif;
+ }
+
+ /*services section*/
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px  solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: #f2f2f2;
+}
+#services .box img{ /*humare pila wla (image1) bahut jyda bara hogya tha ekdum mano ki pura page le lia ho , to usko kabu karne ke liya ye use kia*/
+    height: 160px; /*image ka size isse kafi chota hogya */
+    margin: auto; /* isse jo pila image tha wo phela left cornerr me chipka wa tha, margin aur display dena ke bad wo centre of box me aygya*/
+    display:block;
+}
+#services .box p{
+    font-family: 'Bree Serif',serif;
+}
+
+/*contact section*/
+#contact{
+
+}
+
+#contact::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100px;
+   z-index: -1;
+   opacity: 0.7;
+   background:url(../images/image9.png) no-repeat center center/cover;;
+   
+}
+#contact-box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+   width: 100%;
+   padding: 0.5rem;
+}
+
+footer{
+   background: black;
+   color: white;
+   padding: 9px 20px;
+}
+ /*utility class*/
+ .h-primary{
+    font-family: 'Bree Serif',serif;
+    font-size: 3.8rem; /*effects font size of "welcome to MyonlineMeal" and the text also below it.*/
+    padding: 12px; /*effects padding of "welcome to MyonlineMeal" and the text also below it.*/
+    text-align: center;
+    
+ }
+ .h-secondary{
+    font-family: 'Bree Serif',serif;
+    font-size: 2.3rem; 
+    padding: 12px; 
+    text-align: center;
+ }
+ .btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer; /*jab humlog mouse cusor ko is button ke pass le kar jayenga to "to cursor ek small hand jaise ban jayega*/
+ }
+ .center{
+    text-align: center;
+ }
+ /*Client Section*/
+ #client-section{ /*agar client section likhe ho to client section ki html file me id bhi hona jaruri ha*/
+      height: 344px;
+
+ }
+ #client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../images/image8.jpg');
+    width: 100%;
+    height: 340px;
+    z-index: -1;
+    opacity: 0.6;
+ }
+ #clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+#clients img{
+    height: 120px;
+    
+ }
+ .client-item{
+    padding: 34px;
+ }
+ 
+
