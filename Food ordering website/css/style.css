@@ -143,6 +143,12 @@
 #contact-box textarea{
    width: 100%;
    padding: 0.5rem;
+   border-radius: 9px;
+   font-size: 1.1rem;
+}
+#contact-box label{
+   font-size: 1.3rem;
+   font-family:'Bree Serif',serif ;
 }
 
 footer{
@@ -179,7 +185,7 @@ footer{
  }
  /*Client Section*/
  #client-section{ /*agar client section likhe ho to client section ki html file me id bhi hona jaruri ha*/
-      height: 344px;
+      position: relative;
 
  }
  #client-section::before{
